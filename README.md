@@ -1,4 +1,4 @@
-# GovReport-QA
+# GovReport-VA
 
 A modern Retrieval-Augmented Generation (RAG) system that answers questions across multiple PDF reports using LangChain, FAISS, and the OpenAI API.
 
@@ -6,7 +6,7 @@ A modern Retrieval-Augmented Generation (RAG) system that answers questions acro
 
 ## Overview
 
-GovReport-QA enables users to:
+GovReport-VA enables users to:
 
 - Load multiple PDF documents
 - Split them into text chunks
@@ -50,7 +50,7 @@ Analyzing archived strategic and performance reports from government sources.
 
 ## Project Structure
 
-govreport-qa/
+govreport-va/
 │
 ├── data/ # PDF files (not tracked in Git)
 ├── vector_db/ # Generated embeddings (not tracked in Git)
