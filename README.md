@@ -49,3 +49,82 @@ Analyzing archived strategic and performance reports from government sources.
 ---
 
 ## Project Structure
+
+govreport-qa/
+│
+├── data/ # PDF files (not tracked in Git)
+├── vector_db/ # Generated embeddings (not tracked in Git)
+├── src/
+│ ├── ingest.py # Creates embeddings
+│ ├── qa_chain.py # RAG pipeline (LCEL)
+│ └── app.py # CLI interface
+│
+├── requirements.txt
+├── .gitignore
+└── README.md
+---
+
+### 2. Create Virtual Environment
+
+python -m venv venv
+venv\Scripts\activate
+
+---
+
+### 3. Install Dependencies
+
+pip install -r requirements.txt
+
+
+---
+
+### 4. Add OpenAI API Key
+
+Create a `.env` file in the project root:
+OPENAI_API_KEY=your_api_key_here
+
+
+---
+
+### 5. Add PDF Reports
+
+Place your PDF files inside the `data/` folder.
+
+Example sources:
+
+https://department.va.gov/administrations-and-offices/management/archived-plans-and-reports/
+
+---
+
+### 6. Create Embeddings
+
+Run:
+python src\ingest.py
+
+This will generate the `vector_db/` folder.
+
+---
+
+### 7. Run the Application
+python src\app.py
+
+Type your questions in the terminal.
+
+To exit, type:
+
+---
+
+## Security Notes
+
+This project excludes:
+
+- Virtual environment (`venv/`)
+- API keys (`.env`)
+- Vector database files (`vector_db/`)
+- Python cache files
+
+Make sure your `.gitignore` includes:
+venv/
+.env
+vector_db/
+pycache/
