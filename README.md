@@ -49,19 +49,8 @@ Analyzing archived strategic and performance reports from government sources.
 ---
 
 ## Project Structure
+![imagegithub](https://github.com/user-attachments/assets/0a0870a1-1c1b-4d4f-b38c-f1ee19d98f68)
 
-govreport-va/
-│
-├── data/ # PDF files (not tracked in Git)
-├── vector_db/ # Generated embeddings (not tracked in Git)
-├── src/
-│ ├── ingest.py # Creates embeddings
-│ ├── qa_chain.py # RAG pipeline (LCEL)
-│ └── app.py # CLI interface
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
 ---
 
 ### 2. Create Virtual Environment
